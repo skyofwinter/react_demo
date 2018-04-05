@@ -1,15 +1,13 @@
 This is a collection of simple demos of React.js.
 这是React的一些demo code
 
-## Related Projects
-## 相关推荐
+## Related Projects 相关推荐
 - [React Router Tutorial](https://github.com/reactjs/react-router-tutorial)
 - [React Demos](https://github.com/ruanyf/react-demos)
 - [React Demo](https://github.com/ruanyf/react-testing-demo)
 
 
-## How to use
-## 怎么使用
+## How to use 怎么使用
 
 First copy the repo into your disk.
 首先可选择下载到本地磁盘 或者 本地新建html 复制文件内容
@@ -19,8 +17,7 @@ $ git clone git@github.com:skyofwinter/react_demo.git
 Then play with the source files under the repo's directory.
 然后在浏览器上面运行查看
 
-## HTML Template
-## HTML 模板
+## HTML Template HTML 模板
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -350,7 +347,8 @@ class UserGist extends React.Component{
     render() {
         return (
                 <div>
-                    {this.state.username}'s last gist is <a href={this.state.lastGistUrl}>here</a><p>last gist:<br/>  {this.state.lastGistUrl}</p>
+                    {this.state.username}'s last gist is
+                    <a href={this.state.lastGistUrl}>here</a>
                 </div>
         );
     }
