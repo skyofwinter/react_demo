@@ -12,35 +12,18 @@
     <!--<script src="/build/react-dom.js"></script>-->
     <!--<script src="/build/browser.min.js"></script>-->
 
-
     <title>React 学习</title>
-
 </head>
 <body>
 <div id="dd">
 
-    <script type="text/babel">
-
-        function NotesList(props) {
-                return(
-                    <ol>
-                        {
-                            React.Children.map(props.children, function (child) {
-                                return <li>{child}</li>;
-                            })
-                        }
-                    </ol>
-                );
-        };
-
-        ReactDOM.render(
-            <NotesList>
-                <span>hello</span>
-                <span>world</span>
-            </NotesList>,
-            document.getElementById("dd")
-        )
-    </script>
 </div>
+    <script type="text/babel">
+        ReactDOM.render(
+                <h1>Hello,world!</h1>,
+            document.getElementById("dd")
+        );
+    </script>
+
 </body>
 </html>

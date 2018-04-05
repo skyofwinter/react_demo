@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--/*1. 选择使用CDN*/-->
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <!--/* 2. 选择使用本地JS库文件*/-->
+    <!--<script src="/build/react.js"></script>-->
+    <!--<script src="/build/react-dom.js"></script>-->
+    <!--<script src="/build/browser.min.js"></script>-->
+
+
+    <title>React 学习</title>
+
+</head>
+<body>
+<div id="dd">
+
+    <script type="text/babel">
+
+        function NotesList(props) {
+                return(
+                    <ol>
+                        {
+                            React.Children.map(props.children, function (child) {
+                                return <li>{child}</li>;
+                            })
+                        }
+                    </ol>
+                );
+        };
+
+        ReactDOM.render(
+            <NotesList>
+                <span>hello</span>
+                <span>world</span>
+            </NotesList>,
+            document.getElementById("dd")
+        );
+    </script>
+</div>
+</body>
+</html>

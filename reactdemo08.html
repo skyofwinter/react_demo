@@ -19,33 +19,37 @@
 <div id="dd">
 </div>
     <script type="text/babel">
-        class  InputForm extends React.Component{
+        class LikeButton extends React.Component{
             constructor(){
                 super();
-                this.state = {
-                    value:'input content!'
-                }
-                this.handleChange = this.handleChange.bind(this);
-            }
-            handleChange(event) {
-                this.setState({value: event.target.value});
+                this.state = {liked : false};
+                this.handleClick = this.handleClick.bind(this);
             }
 
-            render() {
+            handleClick(){
+                this.setState(prevState => ({
+                    liked:!prevState.liked
+                }));
+                console.log("liked " + this.state.liked)
+
+            }
+
+            render(){
+                var text = this.state.liked? ' like ':' don\'t like ';
                 return (
-                        <div>
-                            <input type="text" value={this.state.value} onChange={this.handleChange}/>
-                        </div>
-                );
-            }
-
+                    <div>
+                        <button onClick={this.handleClick}>you {text} it, click to change it!</button>
+                    </div>
+                )
+            };
         }
 
 
+
         ReactDOM.render(
-                <InputForm/>,
+                <LikeButton/>,
             document.getElementById("dd")
-        )
+        );
     </script>
 
 </body>
