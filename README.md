@@ -67,7 +67,7 @@ Then play with the source files under the repo's directory.
 ```js
 ReactDOM.render(
   <h1>Hello, world!</h1>,
-  document.getElementById('example')
+  document.getElementById('dd')
 );
 ```
 ## 02: Hello Names
@@ -347,8 +347,7 @@ class UserGist extends React.Component{
     render() {
         return (
                 <div>
-                    {this.state.username}'s last gist is
-                    <a href={this.state.lastGistUrl}>here</a>
+                    {this.state.username}'s last gist is <a href={this.state.lastGistUrl}>here</a>
                 </div>
         );
     }
