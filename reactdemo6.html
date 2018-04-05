@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--/*1. 选择使用CDN*/-->
+
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.min.js"></script>
+    <!--/* 2. 选择使用本地JS库文件*/-->
+    <!--<script src="/build/react.js"></script>-->
+    <!--<script src="/build/react-dom.js"></script>-->
+    <!--<script src="/build/browser.min.js"></script>-->
+
+    <title>React 学习</title>
+
+</head>
+<body>
+<div id="dd">
+</div>
+    <script type="text/babel">
+        const data = 123;
+        function MyTitle(props) {
+            return (<h1> {props.title} </h1>);
+        }
+
+        MyTitle.defaultProps = {
+            title:'default'
+        }
+        MyTitle.proptype = {
+            title: PropTypes.string,
+        }
+
+        ReactDOM.render(
+                <MyTitle title={data}/>,
+            document.getElementById("dd")
+        )
+    </script>
+
+</body>
+</html>
